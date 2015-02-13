@@ -8,9 +8,7 @@
   },
   "author": "Aileo",
   "license": "MIT",
-  "dependencies": {
-    "clj-fuzzy": "^0.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-gjslint": "^0.1.4",
