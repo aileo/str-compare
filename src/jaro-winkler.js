@@ -18,32 +18,15 @@ var commonCalc = function(str1, str2) {
       alreadyMatched = {},
       width = Math.floor(Math.max(str1.length, str2.length) / 2 - 1);
 
-  var transposition = function(index) {
-    if (index < maxMatch) {
-      t += 0.5;
-      for (var i = index; i <= maxMatch; i++) {
-        if (alreadyMatched[i] === 0) {
-          t += 0.5;
-          alreadyMatched[i] = 1;
-        }
-      }
-    }
-    else
-      maxMatch = index;
-  };
 
   for (var i1 = 0; i1 < str1.length; i1++) {
     var match = false;
 
-    if (str1[i1] === str2[i1] && !(i1 in alreadyMatched)) {
+    if (str1[i1] === str2[i1] && l === i1) {
+      l++;
       m++;
-
-      if (l === i1)
-        l++;
-
-      transposition(i1);
-      alreadyMatched[i1] = 0;
-
+      alreadyMatched[i1] === 0;
+      maxMatch = i1;
       continue;
     }
 
@@ -51,10 +34,22 @@ var commonCalc = function(str1, str2) {
       var i2 = Math.max(0, i1 - width);
       i2 < Math.min(str2.length, i1 + width + 1);
       i2++) {
+
       if (str1[i1] === str2[i2] && !(i2 in alreadyMatched)) {
         m++;
 
-        transposition(i2);
+        if (i2 < maxMatch) {
+          t += 0.5;
+          for (var i = i2; i <= maxMatch; i++) {
+            if (alreadyMatched[i] === 0) {
+              t += 0.5;
+              alreadyMatched[i] = 1;
+            }
+          }
+        }
+        else
+          maxMatch = i2;
+
         alreadyMatched[i2] = 0;
 
         break;
