@@ -1,0 +1,20 @@
+{
+  "name": "strClean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clj-fuzzy": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-gjslint": "^0.1.4",
+    "gulp-mocha": "^2.0.0",
+    "run-sequence": "^1.0.2"
+  }
+}
