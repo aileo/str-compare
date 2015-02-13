@@ -1,13 +1,13 @@
 {
-  "name": "strClean",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "str-compare",
+  "version": "0.1.0",
+  "description": "Some algorithms to compare strings.",
+  "main": "str-compare.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Aileo",
+  "license": "MIT",
   "dependencies": {
     "clj-fuzzy": "^0.2.1"
   },
