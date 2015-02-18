@@ -1,13 +1,28 @@
 {
   "name": "str-compare",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Some algorithms to compare strings.",
   "main": "str-compare.js",
+  "author": {
+    "name": "aileo",
+    "url": "https://github.com/aileo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aileo/str-compare"
+  },
   "scripts": {
     "test": "gulp test"
   },
-  "author": "Aileo",
+  "keywords": [
+    "Hamming", "Jaro", "Jaro-Winkler", "Levenshtein", "Sorensen", "string",
+    "word"
+  ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aileo/str-compare/issues"
+  },
+  "homepage": "https://github.com/aileo/str-compare",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.11",
