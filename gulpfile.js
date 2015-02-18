@@ -20,13 +20,13 @@ gulp.task('default', function(done) {
 });
 
 // Lint files and output results to the console
-gulp.task('lint', function(done) {
+gulp.task('lint', function() {
   return gulp.src(paths.linted)
     .pipe(gjslint(gjslinterOptions))
     .pipe(gjslint.reporter('console'));
 });
 
-gulp.task('test', function(done) {
+gulp.task('test', ['lint'], function(done) {
   gulp.src('./tests/tests.js', {read: false})
     .pipe(mocha({reporter: 'spec'}))
     .once('end', function() {
