@@ -1,12 +1,20 @@
 'use strict';
 
+/**
+ * Calculate Sørensen-dice coeficient.
+ * @param  {String} str1 First string to compare
+ * @param  {String} str2 Second string to compare
+ * @return {Number}      Sørensen-dice coeficient.
+ *
+ * Wiki : http://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient
+ */
 module.exports = function(str1, str2) {
   str1 = str1.toLowerCase();
   str2 = str2.toLowerCase();
 
+  // degenerate cases
   if (str1 === str2)
     return 1;
-
   if (str1.length < 2 || str2.length < 2)
     return 0;
 

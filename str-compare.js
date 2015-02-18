@@ -10,8 +10,15 @@ strCompare.jaro = require('./src/jaro-winkler').jaro;
 strCompare.jaroWinkler = require('./src/jaro-winkler').jaroWinkler;
 strCompare.hamming = require('./src/hamming');
 
-strCompare.distanceToSimilarity = function(str1, str2, distance) {
-  return 1 - distance / Math.max(str1.length, str2.length);
+/**
+ * Transform distance to a similarity indice.
+ * @param  {String}   str1     First compared string
+ * @param  {String}   str2     Second compared string
+ * @param  {Function} compare  Comparison function
+ * @return {Number}            Similarity indice
+ */
+strCompare.distanceToSimilarity = function(str1, str2, compare) {
+  return 1 - compare(a,b) / Math.max(str1.length, str2.length);
 };
 
 module.exports = strCompare;

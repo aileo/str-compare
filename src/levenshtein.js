@@ -1,5 +1,13 @@
 'use strict';
 
+/**
+ * Calculate Levenshtein  distance.
+ * @param  {String} str1 First string to compare
+ * @param  {String} str2 Second string to compare
+ * @return {Number}      Levenshtein distance.
+ *
+ * Wiki : http://en.wikipedia.org/wiki/Levenshtein_distance
+ */
 module.exports = function(str1, str2) {
   str1 = str1.toLowerCase();
   str2 = str2.toLowerCase();
@@ -18,7 +26,6 @@ module.exports = function(str1, str2) {
   for (var i1 = 1; i1 <= str1.length; i1++) {
     v[i1] = [];
     v[i1][0] = i1;
-
 
     for (var i2 = 0; i2 < str2.length; i2++) {
         // Are the two charaters at the same index equals ?
